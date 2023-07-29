@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UnipiGuide
 {
-    public partial class Welcome : BaseForm
+    public partial class Welcome : Form
     {
         public Welcome()
         {
