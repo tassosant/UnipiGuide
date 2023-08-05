@@ -16,5 +16,25 @@ namespace UnipiGuide
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_WOC1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
