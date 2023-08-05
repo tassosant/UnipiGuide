@@ -12,9 +12,9 @@ namespace UnipiGuide
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(bool isUser)
         {
-            InitializeComponent();
+            InitializeComponent(isUser);
         }
     }
 }

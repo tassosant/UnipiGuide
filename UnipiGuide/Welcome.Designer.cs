@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(354, 218);
+            this.label1.Location = new System.Drawing.Point(360, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 32);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(354, 303);
+            this.label2.Location = new System.Drawing.Point(360, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 32);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.button_WOC1.FlatAppearance.BorderSize = 0;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(360, 393);
+            this.button_WOC1.Location = new System.Drawing.Point(366, 364);
             this.button_WOC1.Name = "button_WOC1";
             this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Silver;
             this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.LightGreen;
@@ -83,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UnipiGuide.Properties.Resources.logopapei3;
-            this.pictureBox1.Location = new System.Drawing.Point(360, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(366, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(470, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(525, 204);
+            this.richTextBox1.Location = new System.Drawing.Point(531, 176);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(305, 46);
             this.richTextBox1.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(525, 289);
+            this.richTextBox2.Location = new System.Drawing.Point(531, 261);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(305, 46);
             this.richTextBox2.TabIndex = 5;
@@ -114,7 +114,7 @@
             this.button_WOC2.FlatAppearance.BorderSize = 0;
             this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC2.Location = new System.Drawing.Point(427, 552);
+            this.button_WOC2.Location = new System.Drawing.Point(366, 576);
             this.button_WOC2.Name = "button_WOC2";
             this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
