@@ -30,15 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            // schools button
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
-            // eclass button
             this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
-            // review button
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
-           
-
-
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -71,6 +67,7 @@
             this.button_WOC1.Text = "σχολές";
             this.button_WOC1.TextColor = System.Drawing.Color.White;
             this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC2_Click);
             // 
             // button_WOC2
             // 
@@ -89,6 +86,7 @@
             this.button_WOC2.Text = "eclass";
             this.button_WOC2.TextColor = System.Drawing.Color.White;
             this.button_WOC2.UseVisualStyleBackColor = true;
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click_1);
             // 
             // button_WOC3
             // 
@@ -107,13 +105,24 @@
             this.button_WOC3.Text = "κριτική";
             this.button_WOC3.TextColor = System.Drawing.Color.White;
             this.button_WOC3.UseVisualStyleBackColor = true;
+            this.button_WOC3.Click += new System.EventHandler(this.button_WOC3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UnipiGuide.Properties.Resources.logopapei3;
+            this.pictureBox1.Location = new System.Drawing.Point(75, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(470, 137);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(1180, 663);
+            this.ClientSize = new System.Drawing.Size(1185, 662);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_WOC3);
             this.Controls.Add(this.button_WOC2);
             this.Controls.Add(this.button_WOC1);
@@ -121,6 +130,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,5 +141,6 @@
         private ePOSOne.btnProduct.Button_WOC button_WOC1;
         private ePOSOne.btnProduct.Button_WOC button_WOC2;
         private ePOSOne.btnProduct.Button_WOC button_WOC3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
