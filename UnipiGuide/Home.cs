@@ -14,7 +14,12 @@ namespace UnipiGuide
     {
         public Home(bool isUser)
         {
-            InitializeComponent(isUser);
+            InitializeComponent();
+            if (!isUser)
+            {
+                // this is the eclass button, accessible only for registered users
+                button_WOC2.Hide();
+            }
         }
     }
 }

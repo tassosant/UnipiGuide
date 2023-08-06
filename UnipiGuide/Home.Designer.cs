@@ -26,18 +26,17 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(bool isUser)
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            // schools button
             this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            // eclass button
             this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
+            // review button
             this.button_WOC3 = new ePOSOne.btnProduct.Button_WOC();
-            if (!isUser)
-            {
-                // this is the eclass button, accessible only for registered users
-                button_WOC2.Hide();
-            }
+           
 
 
             this.SuspendLayout();
