@@ -55,6 +55,7 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controllers\CreateMockModels.cs" />
     <Compile Include="EClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClassRoom.cs" />
+    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\Professor.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="review.cs">
       <SubType>Form</SubType>
     </Compile>
