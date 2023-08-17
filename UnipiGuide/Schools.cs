@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnipiGuide.Models;
 
 namespace UnipiGuide
 {
@@ -15,6 +16,18 @@ namespace UnipiGuide
         public Schools()
         {
             InitializeComponent();
+        }
+
+        private void Schools_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_WOC1_Click(object sender, EventArgs e)
+        {
+            // school of economics table 
+            Tmhma h = new Tmhma();
+            h.ShowDialog();
         }
     }
 }
