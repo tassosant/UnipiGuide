@@ -55,7 +55,6 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controllers\CreateMockModels.cs" />
     <Compile Include="EClass.cs">
       <SubType>Form</SubType>
     </Compile>
