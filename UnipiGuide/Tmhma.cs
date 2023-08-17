@@ -14,27 +14,25 @@ namespace UnipiGuide
 {
     public partial class Tmhma : Form
     {
-        PrintDocument document = new PrintDocument();
-        PrintDialog dialog = new PrintDialog();
+       
         public Tmhma()
         {
             InitializeComponent();
-            document.PrintPage += new PrintPageEventHandler(document_PrintPage);
+            //document.PrintPage += new PrintPageEventHandler(document_PrintPage);
         }
 
-        void document_PrintPage(object sender, PrintPageEventArgs e)
+        private void PrintDocumentOnPrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(richTextBox1.Text, new Font("Arial", 20, FontStyle.Regular), Brushes.Black, 20, 20);
+            e.Graphics.DrawString(this.richTextBox1.Text, this.richTextBox1.Font, Brushes.Black, 10, 25);
         }
+
         private void button_WOC1_Click(object sender, EventArgs e)
         {
             // print window "Σχολή Οικονομικών, Επιχειρηματικών και Διεθνών Σπουδών"
-            dialog.Document = document;
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                document.Print();
-            }
-
+           
+            PrintDocument printDocument = new PrintDocument();
+            printDocument.PrintPage += PrintDocumentOnPrintPage;
+            printDocument.Print();
 
         }
     }
