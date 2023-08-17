@@ -117,6 +117,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="review.resx">
+      <DependentUpon>review.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schools.resx">
       <DependentUpon>Schools.cs</DependentUpon>
     </EmbeddedResource>
