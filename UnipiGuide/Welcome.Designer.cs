@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button_WOC2 = new ePOSOne.btnProduct.Button_WOC();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
+            this.UsernameTextBox = new System.Windows.Forms.RichTextBox();
+            this.PasswordTextBox = new System.Windows.Forms.RichTextBox();
+            this.GuestButton = new ePOSOne.btnProduct.Button_WOC();
+            this.LoginButton = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(498, 227);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 32);
+            this.label1.Size = new System.Drawing.Size(201, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName";
             // 
@@ -56,7 +56,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(498, 312);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 32);
+            this.label2.Size = new System.Drawing.Size(185, 44);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -71,71 +71,70 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox1
+            // UsernameTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(669, 213);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(305, 46);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.UsernameTextBox.Location = new System.Drawing.Point(669, 213);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(305, 46);
+            this.UsernameTextBox.TabIndex = 4;
+            this.UsernameTextBox.Text = "";
             // 
-            // richTextBox2
+            // PasswordTextBox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(669, 298);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(305, 46);
-            this.richTextBox2.TabIndex = 5;
-            this.richTextBox2.Text = "";
-            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            this.PasswordTextBox.Location = new System.Drawing.Point(669, 298);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(305, 46);
+            this.PasswordTextBox.TabIndex = 5;
+            this.PasswordTextBox.Text = "";
             // 
-            // button_WOC2
+            // GuestButton
             // 
-            this.button_WOC2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.button_WOC2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.button_WOC2.FlatAppearance.BorderSize = 0;
-            this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC2.Location = new System.Drawing.Point(504, 613);
-            this.button_WOC2.Name = "button_WOC2";
-            this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.button_WOC2.OnHoverTextColor = System.Drawing.Color.LightGreen;
-            this.button_WOC2.Size = new System.Drawing.Size(295, 85);
-            this.button_WOC2.TabIndex = 6;
-            this.button_WOC2.Text = "Continue as Guest";
-            this.button_WOC2.TextColor = System.Drawing.Color.White;
-            this.button_WOC2.UseVisualStyleBackColor = true;
-            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
+            this.GuestButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.GuestButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.GuestButton.FlatAppearance.BorderSize = 0;
+            this.GuestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuestButton.Location = new System.Drawing.Point(504, 613);
+            this.GuestButton.Name = "GuestButton";
+            this.GuestButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.GuestButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.GuestButton.OnHoverTextColor = System.Drawing.Color.LightGreen;
+            this.GuestButton.Size = new System.Drawing.Size(295, 85);
+            this.GuestButton.TabIndex = 6;
+            this.GuestButton.Text = "Continue as Guest";
+            this.GuestButton.TextColor = System.Drawing.Color.White;
+            this.GuestButton.UseVisualStyleBackColor = true;
+            this.GuestButton.Click += new System.EventHandler(this.guest_button_WOC2_Click);
             // 
-            // button_WOC1
+            // LoginButton
             // 
-            this.button_WOC1.BorderColor = System.Drawing.Color.Silver;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(504, 401);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Silver;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.LightGreen;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.button_WOC1.Size = new System.Drawing.Size(159, 60);
-            this.button_WOC1.TabIndex = 2;
-            this.button_WOC1.Text = "Login";
-            this.button_WOC1.TextColor = System.Drawing.Color.White;
-            this.button_WOC1.UseVisualStyleBackColor = true;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
+            this.LoginButton.BorderColor = System.Drawing.Color.Silver;
+            this.LoginButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
+            this.LoginButton.FlatAppearance.BorderSize = 0;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.Location = new System.Drawing.Point(504, 401);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.OnHoverBorderColor = System.Drawing.Color.Silver;
+            this.LoginButton.OnHoverButtonColor = System.Drawing.Color.LightGreen;
+            this.LoginButton.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.LoginButton.Size = new System.Drawing.Size(159, 60);
+            this.LoginButton.TabIndex = 2;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.TextColor = System.Drawing.Color.White;
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.login_button_WOC1_Click);
             // 
             // Welcome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1563, 756);
-            this.Controls.Add(this.button_WOC2);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.GuestButton);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button_WOC1);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Welcome";
@@ -151,11 +150,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+        private ePOSOne.btnProduct.Button_WOC LoginButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private ePOSOne.btnProduct.Button_WOC button_WOC2;
+        private System.Windows.Forms.RichTextBox UsernameTextBox;
+        private System.Windows.Forms.RichTextBox PasswordTextBox;
+        private ePOSOne.btnProduct.Button_WOC GuestButton;
     }
 }
 

@@ -34,7 +34,7 @@ namespace UnipiGuide
         // review button
         private void button_WOC3_Click(object sender, EventArgs e)
         {
-            review h = new review();
+            Review h = new Review();
             h.ShowDialog();
         }
 

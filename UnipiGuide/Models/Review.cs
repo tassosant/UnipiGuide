@@ -10,5 +10,11 @@ namespace UnipiGuide.Models
     {
         int stars; /* 1-5 */
         string comment; /* can be null */
+        int reviewId;
+
+        public int ReviewId { get; set; }
+
+        public int Stars { get; set; }
+        public string Comment { get { return comment; } set { comment = value; } }
     }
 }

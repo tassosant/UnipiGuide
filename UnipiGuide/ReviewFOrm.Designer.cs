@@ -1,6 +1,6 @@
 ﻿namespace UnipiGuide
 {
-    partial class review
+    partial class Review
     {
         /// <summary>
         /// Required designer variable.

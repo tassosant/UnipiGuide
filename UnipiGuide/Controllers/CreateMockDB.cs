@@ -13,7 +13,7 @@ namespace UnipiGuide.Controllers
         User[] users;
         Professor[] professors;
         Lesson[] lessons;
-        Review[] reviews;
+        Models.Review[] reviews;
         ClassRoom[] classrooms;
 
 

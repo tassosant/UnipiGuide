@@ -10,6 +10,8 @@ namespace UnipiGuide.Models
     {
         string username;
         int id;
+        int reviewId;
+        Review Review { get; set; }
         string password;
         public string UserName { 
             get { return username; }
@@ -19,6 +21,12 @@ namespace UnipiGuide.Models
         public int Id { 
             get { return id; } 
             set { id = value; }
+        }
+
+        public int ReviewId
+        {
+            get { return reviewId; }
+            set { reviewId = value; }
         }
 
         public string Password
