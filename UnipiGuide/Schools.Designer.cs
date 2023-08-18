@@ -63,6 +63,7 @@
             this.button_WOC1.Text = "Σχολή Οικονομικών, \r\nΕπιχειρηματικών και \r\nΔιεθνών Σπουδών";
             this.button_WOC1.TextColor = System.Drawing.Color.White;
             this.button_WOC1.UseVisualStyleBackColor = true;
+            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
             // button_WOC2
             // 
@@ -131,6 +132,7 @@
             this.Name = "Schools";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schools";
+            this.Load += new System.EventHandler(this.Schools_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
