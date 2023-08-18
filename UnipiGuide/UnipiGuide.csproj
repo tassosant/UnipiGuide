@@ -55,10 +55,10 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
-<<<<<<< HEAD
+    <!--HEAD-->
     <Compile Include="Controllers\CreateMockDB.cs" />
-=======
->>>>>>> 1ffd37e37d424ff784f4921fb9632b4e5ab3e7b6
+    <!--=======
+1ffd37e37d424ff784f4921fb9632b4e5ab3e7b6-->
     <Compile Include="EClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,14 +123,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<<<<<<< HEAD
+    <!--HEAD-->
     <EmbeddedResource Include="ReviewForm.resx">
       <DependentUpon>ReviewForm.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="review.resx">
-      <DependentUpon>review.cs</DependentUpon>
->>>>>>> 1ffd37e37d424ff784f4921fb9632b4e5ab3e7b6
     </EmbeddedResource>
+    <!--=======-->
     <EmbeddedResource Include="Schools.resx">
       <DependentUpon>Schools.cs</DependentUpon>
     </EmbeddedResource>
