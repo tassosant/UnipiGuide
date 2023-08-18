@@ -1,6 +1,6 @@
 ﻿namespace UnipiGuide
 {
-    partial class Review
+    partial class ReviewForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Review
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Review";
             this.Text = "review";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

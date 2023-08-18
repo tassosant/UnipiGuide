@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UnipiGuide
 {
-    public partial class Review : Form
+    public partial class ReviewForm : Form
     {
-        public Review()
+        public ReviewForm()
         {
             InitializeComponent();
         }
