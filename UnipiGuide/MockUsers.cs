@@ -13,7 +13,7 @@ namespace UnipiGuide
         ArrayList users;
         User selectedUser;
 
-        public User getSelectedUser { 
+        public User SelectedUser { 
             get { return selectedUser; } 
             set { selectedUser = value; }
         }
@@ -33,20 +33,13 @@ namespace UnipiGuide
             {
                 User user = new User();
                 user.Id = index;
-                user.UserName = "someUserName" + index;
+                user.UserName = "someUserName" + index.ToString();
                 user.Password = "password"+index.ToString();
                 this.users.Add(user);
             }
 
         }
 
-        public User SelectUserById(int id)
-        {
-            foreach(User user in this.users)
-            {
-                if(user.Id == id) return user; 
-            }
-            return null;
-        }
+       
     }
 } 

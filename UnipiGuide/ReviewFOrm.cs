@@ -16,5 +16,15 @@ namespace UnipiGuide
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubmitReviwButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

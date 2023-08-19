@@ -16,7 +16,7 @@ namespace UnipiGuide
     {
         MockUsers mockUsers;
         ArrayList users;
-        User selectedUser;
+        
         public Welcome()
         {
             InitializeComponent();
@@ -39,19 +39,22 @@ namespace UnipiGuide
         private void login_button_WOC1_Click(object sender, EventArgs e)
         {
             InitWelcomeFormsModels();
+            
             bool isUser = true;
             User user = null;
             // TODO code to validate user
             if ((user = ValidateUser()) == null)
             {
                 isUser = false;
+                this.ErrorLoginMessageLabel.Text = "Wrong username or password";
             }
             else
             {
-                this.selectedUser = user;
+                this.mockUsers.SelectedUser = user;
+                this.ErrorLoginMessageLabel.Text = string.Empty;
+                Home h = new Home(isUser, this.mockUsers.SelectedUser);
+                h.ShowDialog();
             }
-            Home h = new Home(isUser);
-            h.ShowDialog();
         }
 
         private User ValidateUser()
@@ -60,7 +63,7 @@ namespace UnipiGuide
             string password = this.PasswordTextBox.Text;
             foreach(User user in this.users)
             {
-                if (username.Equals(user.UserName) && password.Equals(password))
+                if (username.Equals(user.UserName) && password.Equals(user.Password))
                 {
                     return user;
                 }
@@ -77,7 +80,7 @@ namespace UnipiGuide
         private void guest_button_WOC2_Click(object sender, EventArgs e)
         {
             bool isUser = false;
-            Home h = new Home(isUser); 
+            Home h = new Home(isUser, null); 
             h.ShowDialog();
             
              

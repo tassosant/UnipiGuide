@@ -72,9 +72,6 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="MockUsers.cs" />
-    <Compile Include="Models\ClassRoom.cs" />
-    <Compile Include="Models\Lesson.cs" />
-    <Compile Include="Models\Professor.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="ReviewForm.cs">
@@ -83,7 +80,6 @@
     <Compile Include="ReviewForm.Designer.cs">
       <DependentUpon>ReviewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reviews.cs" />
     <Compile Include="Schools.cs">
       <SubType>Form</SubType>
     </Compile>

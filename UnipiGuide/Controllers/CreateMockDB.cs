@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -8,88 +9,83 @@ using UnipiGuide.Models;
 
 namespace UnipiGuide.Controllers
 {
-    internal class CreateMockDB
+    public class CreateMockDB
     {
-        User[] users;
-        Professor[] professors;
-        Lesson[] lessons;
-        Models.Review[] reviews;
-        ClassRoom[] classrooms;
+        ArrayList users;
+        ArrayList reviews;
+        User selectedUser;
+
+        public ArrayList Users { get { return users; } }
+        public ArrayList Reviews { get { return reviews; } }
 
 
-        public User[] Users { get { return users; } }
-        public Professor[] Professors { get { return professors; } }
-        public Lesson[] Lessons { get { return lessons; } }
-        public ClassRoom[] ClassRooms { get { return classrooms; } }
+        private Review CreateReview(int id)
+        {
+            Review review = new Review();
+            review.ReviewId = id;
+            review.Comment= "Comment"+id.ToString();
+            return review;
+        }
+       
 
 
-
-        private User[] CreateMockUsers()
+        private void CreateMockUsers()
         {
             int usersLength = 10;
-            User[] tempUsers = new User[usersLength];
+            
             int index;
             for(index = 0; index < usersLength; index++)
             {
-                User user = new User();
+                /*User user = new User();
                 user.Id = index;
-                user.UserName = "aUserName" + index;
-                tempUsers[index] = user;                
+                user.UserName = "aUserName" + index.ToString();
+                user.Password = "password" + index.ToString();
+                Review review = CreateReview(user.Id);
+                user.Review = review;
+                user.ReviewId = review.ReviewId;
+                this.users.Add(user);
+                */
             }
 
-            return (User[])tempUsers.Clone();
+           
             
         }
 
-        private Professor[] CreateMockProfessors()
+        public void CreateUser(string username)
         {
-            int professorsLength = 5;
-            Professor[] tempProfessors = new Professor[professorsLength];
-            int index;
-            for(index = 0;index < professorsLength; index++)
-            {
-                Professor professor = new Professor();
-                professor.ProfessorId = index;
-                professor.ProfessorName = "aProfessorName" + index;
-                professors[index] = professor;
-            }
-            return (Professor[])tempProfessors.Clone();
+            int id = this.users.Count;
+            User user = new User();
+            user.UserName = username+id.ToString();
+            user.Password = "password"+id.ToString();
+            this.selectedUser = user;
+            CreateReview("comment");
         }
 
-        private Lesson[] CreateMockLessons()
+        public void CreateReview(string comment)
         {
-            int lessonsLength = 5;
-            Lesson[] tempLessons = new Lesson[lessonsLength];
-            int index;
-            for( index = 0; index < lessonsLength; index++)
-            {
-                Lesson lesson = new Lesson();
-                lesson.LessonId = index;
-                lesson.LessonName = "aLessonName" + index;
-            }
-            return (Lesson[])lessons.Clone();
+            Review review= new Review();
+            review.ReviewId = this.selectedUser.Id;
+            review.Comment = comment + review.ReviewId.ToString();
+            this.reviews.Add(review);
         }
 
-        private ClassRoom[] CreateMockClassRooms()
+        public void BindReviewToUser(int reviewId, int userId)
         {
-            int classroomsLength = 7;
-            ClassRoom[] tempClassRooms = new ClassRoom[classroomsLength];
-            int index;
-            for(index=0; index < classroomsLength; index++)
-            {
-                ClassRoom classroom = new ClassRoom();
-                classroom.ClassroomId = index;
-                classroom.ClassRoomName = "aClassRoomName";
-                tempClassRooms[index] = classroom;
-            }
-            return (ClassRoom[])tempClassRooms.Clone();
+
         }
+
+        
 
         public CreateMockDB() {
-            Array.Copy(CreateMockUsers(), 0, Users, 0, CreateMockUsers().Length);
-            Array.Copy(CreateMockClassRooms(), 0, ClassRooms, 0, CreateMockClassRooms().Length);
-            Array.Copy(CreateMockLessons(), 0, Lessons, 0, CreateMockLessons().Length);
-            Array.Copy(CreateMockProfessors(), 0, Lessons, 0, CreateMockProfessors().Length);
+            this.users = new ArrayList();
+            this.reviews = new ArrayList();
+            CreateMockUsers();
+
+            
+            this.selectedUser = null;
+
+            //Array.Copy(CreateMockUsers(), 0, Users, 0, CreateMockUsers().Length);
+            
         }
     }
 }

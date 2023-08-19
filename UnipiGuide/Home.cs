@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnipiGuide.Models;
 
 namespace UnipiGuide
 {
     public partial class Home : Form
     {
-        public Home(bool isUser)
+        public Home(bool isUser, User user)
         {
             InitializeComponent();
             if (!isUser)

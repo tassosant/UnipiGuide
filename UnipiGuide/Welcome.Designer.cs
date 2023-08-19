@@ -35,6 +35,7 @@
             this.PasswordTextBox = new System.Windows.Forms.RichTextBox();
             this.GuestButton = new ePOSOne.btnProduct.Button_WOC();
             this.LoginButton = new ePOSOne.btnProduct.Button_WOC();
+            this.ErrorLoginMessageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,11 +126,21 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.login_button_WOC1_Click);
             // 
+            // ErrorLoginMessageLabel
+            // 
+            this.ErrorLoginMessageLabel.AutoSize = true;
+            this.ErrorLoginMessageLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLoginMessageLabel.Location = new System.Drawing.Point(669, 360);
+            this.ErrorLoginMessageLabel.Name = "ErrorLoginMessageLabel";
+            this.ErrorLoginMessageLabel.Size = new System.Drawing.Size(0, 25);
+            this.ErrorLoginMessageLabel.TabIndex = 7;
+            // 
             // Welcome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1563, 756);
+            this.Controls.Add(this.ErrorLoginMessageLabel);
             this.Controls.Add(this.GuestButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.UsernameTextBox);
@@ -155,6 +166,7 @@
         private System.Windows.Forms.RichTextBox UsernameTextBox;
         private System.Windows.Forms.RichTextBox PasswordTextBox;
         private ePOSOne.btnProduct.Button_WOC GuestButton;
+        private System.Windows.Forms.Label ErrorLoginMessageLabel;
     }
 }
 

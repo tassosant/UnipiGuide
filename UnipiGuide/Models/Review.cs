@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace UnipiGuide.Models
 {
-    internal class Review
+    public class Review
     {
         int stars; /* 1-5 */
         string comment; /* can be null */
         int reviewId;
+
+        public Review() { }
 
         public int ReviewId { get; set; }
 

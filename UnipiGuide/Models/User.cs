@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace UnipiGuide.Models
 {
-    internal class User
+    public class User
     {
         string username;
         int id;
         int reviewId;
-        Review Review { get; set; }
+        Review review;
         string password;
+
+
+        public User() { }
+
         public string UserName { 
             get { return username; }
             set { username = value; }
@@ -37,6 +41,12 @@ namespace UnipiGuide.Models
                 password = value;
             }
         }
+
+        public Review Review { 
+            get { return review; }
+            set { review = value; }
+        }
+        
 
         
 
