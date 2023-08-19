@@ -15,10 +15,26 @@ namespace UnipiGuide
     public partial class Tmhma : Form
     {
        
-        public Tmhma()
+        public Tmhma(string department)
         {
             InitializeComponent();
-            //document.PrintPage += new PrintPageEventHandler(document_PrintPage);
+            // initialize text box
+            switch (department) {
+                case "economics":
+                    richTextBox1.Text = "economics";
+                    break;
+                case "statistics":
+                    richTextBox1.Text = "statistics";
+                    break;
+                case "shipping":
+                    richTextBox1.Text = "shipping";
+                    break;
+                case "informatics":
+                    richTextBox1.Text = "informatics";
+                    break;
+            }
+            
+            
         }
 
         private void PrintDocumentOnPrintPage(object sender, PrintPageEventArgs e)

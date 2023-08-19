@@ -26,7 +26,28 @@ namespace UnipiGuide
         private void button_WOC1_Click(object sender, EventArgs e)
         {
             // school of economics table 
-            Tmhma h = new Tmhma();
+            Tmhma h = new Tmhma("economics");
+            h.ShowDialog();
+        }
+
+        private void button_WOC2_Click(object sender, EventArgs e)
+        {
+            // sxoli nautilias
+            Tmhma h = new Tmhma("shipping");
+            h.ShowDialog();
+        }
+
+        private void button_WOC4_Click(object sender, EventArgs e)
+        {
+            // sxoli xrimatooikonomikis kai statistikis
+            Tmhma h = new Tmhma("statistics");
+            h.ShowDialog();
+        }
+
+        private void button_WOC3_Click(object sender, EventArgs e)
+        {
+            // sxoli pliroforikis
+            Tmhma h = new Tmhma("informatics");
             h.ShowDialog();
         }
     }

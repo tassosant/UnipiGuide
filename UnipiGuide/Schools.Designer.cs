@@ -82,6 +82,7 @@
             this.button_WOC2.Text = "Σχολή Ναυτιλίας \r\n & Βιομηχανίας";
             this.button_WOC2.TextColor = System.Drawing.Color.White;
             this.button_WOC2.UseVisualStyleBackColor = true;
+            this.button_WOC2.Click += new System.EventHandler(this.button_WOC2_Click);
             // 
             // button_WOC3
             // 
@@ -100,6 +101,7 @@
             this.button_WOC3.Text = "Σχολή Τεχνολογιών\r\n   Πληροφορικής \r\nκαι Επικοινωνιών";
             this.button_WOC3.TextColor = System.Drawing.Color.White;
             this.button_WOC3.UseVisualStyleBackColor = true;
+            this.button_WOC3.Click += new System.EventHandler(this.button_WOC3_Click);
             // 
             // button_WOC4
             // 
@@ -118,6 +120,7 @@
             this.button_WOC4.Text = "           Σχολή\r\n Χρηματοοικονομικής \r\n        και Στατιστικής";
             this.button_WOC4.TextColor = System.Drawing.Color.White;
             this.button_WOC4.UseVisualStyleBackColor = true;
+            this.button_WOC4.Click += new System.EventHandler(this.button_WOC4_Click);
             // 
             // Schools
             // 
