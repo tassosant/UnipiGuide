@@ -8,13 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnipiGuide.Controllers;
 using UnipiGuide.Models;
 
 namespace UnipiGuide
 {
     public partial class Welcome : Form
     {
-        MockUsers mockUsers;
+        /*MockUsers mockUsers;*/
+        MockDB db;
         ArrayList users;
         
         public Welcome()
@@ -25,9 +27,12 @@ namespace UnipiGuide
 
         private void InitWelcomeFormsModels()
         {
-            this.mockUsers = new MockUsers();
+            /*this.mockUsers = new MockUsers();
             this.users = new ArrayList();
-            this.users = this.mockUsers.Users;
+            this.users = this.mockUsers.Users;*/
+            this.db = new MockDB(); //create the users
+            this.users = new ArrayList();
+            this.users = MockDB.Users;
         }              
 
         private void label2_Click(object sender, EventArgs e)
@@ -50,9 +55,9 @@ namespace UnipiGuide
             }
             else
             {
-                this.mockUsers.SelectedUser = user;
+                this.db.SelectedUser = user;
                 this.ErrorLoginMessageLabel.Text = string.Empty;
-                Home h = new Home(isUser, this.mockUsers.SelectedUser);
+                Home h = new Home(isUser, this.db.SelectedUser);
                 h.ShowDialog();
             }
         }

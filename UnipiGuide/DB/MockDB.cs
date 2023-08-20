@@ -9,23 +9,27 @@ using UnipiGuide.Models;
 
 namespace UnipiGuide.Controllers
 {
-    public class CreateMockDB
+    public class MockDB
     {
-        ArrayList users;
-        ArrayList reviews;
-        User selectedUser;
+        static ArrayList users;
+        static ArrayList reviews;
+        static User selectedUser;
 
-        public ArrayList Users { get { return users; } }
-        public ArrayList Reviews { get { return reviews; } }
+        public static ArrayList Users { get { return users; } }
+        public static ArrayList Reviews { get { return reviews; } }
 
+        public User SelectedUser { 
+            get { return selectedUser; } 
+            set { selectedUser = value; }
+        }
 
-        private Review CreateReview(int id)
+        /*private Review CreateReview(int id)
         {
             Review review = new Review();
             review.ReviewId = id;
             review.Comment= "Comment"+id.ToString();
             return review;
-        }
+        }*/
        
 
 
@@ -36,6 +40,7 @@ namespace UnipiGuide.Controllers
             int index;
             for(index = 0; index < usersLength; index++)
             {
+                CreateUser("someUsername");
                 /*User user = new User();
                 user.Id = index;
                 user.UserName = "aUserName" + index.ToString();
@@ -53,36 +58,44 @@ namespace UnipiGuide.Controllers
 
         public void CreateUser(string username)
         {
-            int id = this.users.Count;
+            int id = users.Count;
             User user = new User();
             user.UserName = username+id.ToString();
-            user.Password = "password"+id.ToString();
-            this.selectedUser = user;
-            CreateReview("comment");
+            user.Password = "password"+id.ToString();            
+            user.Review = CreateReview("comment", id);                        
+            selectedUser = user;
+            users.Add(user);
         }
 
-        public void CreateReview(string comment)
+        public Review CreateReview(string comment, int id)
         {
             Review review= new Review();
-            review.ReviewId = this.selectedUser.Id;
+            review.ReviewId = id;
             review.Comment = comment + review.ReviewId.ToString();
-            this.reviews.Add(review);
+            reviews.Add(review);
+            return review;
         }
 
         public void BindReviewToUser(int reviewId, int userId)
         {
-
+            
         }
 
         
 
-        public CreateMockDB() {
-            this.users = new ArrayList();
-            this.reviews = new ArrayList();
+        public MockDB() {
+            //delete properties because they are static
+            users = null;
+            reviews = null;
+            selectedUser = null; 
+
+
+            users = new ArrayList();
+            reviews = new ArrayList();
             CreateMockUsers();
 
             
-            this.selectedUser = null;
+            selectedUser = null;
 
             //Array.Copy(CreateMockUsers(), 0, Users, 0, CreateMockUsers().Length);
             

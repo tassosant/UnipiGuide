@@ -56,7 +56,7 @@
       <SubType>Component</SubType>
     </Compile>
     <!--HEAD-->
-    <Compile Include="Controllers\CreateMockDB.cs" />
+    <Compile Include="DB\MockDB.cs" />
     <!--=======
 1ffd37e37d424ff784f4921fb9632b4e5ab3e7b6-->
     <Compile Include="EClass.cs">
