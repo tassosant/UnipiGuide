@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnipiGuide.Controllers;
+using UnipiGuide.Models;
 
 namespace UnipiGuide
 {
@@ -18,6 +20,7 @@ namespace UnipiGuide
         {
             InitializeComponent();
             //pass by reference thd db
+            DisplayRows();
 
         }
 
@@ -31,9 +34,30 @@ namespace UnipiGuide
             
         }
 
-        private void CreateReviewLayoutRow()
+        private void DisplayRows()
         {
+            foreach(User user in MockDB.Users)
+            {
+                CreateRow(user);
+            }
+        }
+
+        private void CreateRow(User user)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            this.dataGridView1.Rows.Add(
+                new object[]
+                    {
+                        user.UserName,
+                        user.Review.Stars,
+                        user.Review.Comment,
+                    }
+                );
             
+            /*row.Cells["User"].Value = user.UserName;
+            row.Cells["Stars"].Value = user.Review.Stars;
+            row.Cells["Comment"].Value = user.Review.Comment;*/
+            //Debug.WriteLine(this.dataGridView1.Columns[0].Name);
         }
 
         

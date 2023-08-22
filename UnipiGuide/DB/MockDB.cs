@@ -76,10 +76,10 @@ namespace UnipiGuide.Controllers
             return review;
         }
 
-        public void BindReviewToUser(int reviewId, int userId)
+        /*public void BindReviewToUser(int reviewId, int userId)
         {
             
-        }
+        }*/
 
         
 
