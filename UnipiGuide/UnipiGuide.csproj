@@ -149,5 +149,17 @@
   <ItemGroup>
     <None Include="Resources\logopapei3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white star smaller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white star smaller %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow small_40.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

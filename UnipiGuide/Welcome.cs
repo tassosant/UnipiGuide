@@ -55,9 +55,11 @@ namespace UnipiGuide
             }
             else
             {
-                this.db.SelectedUser = user;
+                //this.db.SelectedUser = user;
+                MockDB.SelectedUser = user;
                 this.ErrorLoginMessageLabel.Text = string.Empty;
-                Home h = new Home(isUser, this.db.SelectedUser);
+                //Home h = new Home(isUser, this.db.SelectedUser);
+                Home h = new Home(isUser, MockDB.SelectedUser);
                 h.ShowDialog();
             }
         }

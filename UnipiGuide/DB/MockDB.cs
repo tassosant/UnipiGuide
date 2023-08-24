@@ -18,7 +18,7 @@ namespace UnipiGuide.Controllers
         public static ArrayList Users { get { return users; } }
         public static ArrayList Reviews { get { return reviews; } }
 
-        public User SelectedUser { 
+        public static User SelectedUser { 
             get { return selectedUser; } 
             set { selectedUser = value; }
         }
