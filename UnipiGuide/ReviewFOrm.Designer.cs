@@ -157,7 +157,7 @@
             // yellowStarPictureBox
             // 
             this.yellowStarPictureBox.Image = global::UnipiGuide.Properties.Resources.yellow_small_40;
-            this.yellowStarPictureBox.Location = new System.Drawing.Point(164, 249);
+            this.yellowStarPictureBox.Location = new System.Drawing.Point(164, 150);
             this.yellowStarPictureBox.Name = "yellowStarPictureBox";
             this.yellowStarPictureBox.Size = new System.Drawing.Size(87, 93);
             this.yellowStarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -200,7 +200,7 @@
             // yellowStarPictureBox2
             // 
             this.yellowStarPictureBox2.Image = global::UnipiGuide.Properties.Resources.yellow_small_40;
-            this.yellowStarPictureBox2.Location = new System.Drawing.Point(257, 249);
+            this.yellowStarPictureBox2.Location = new System.Drawing.Point(257, 150);
             this.yellowStarPictureBox2.Name = "yellowStarPictureBox2";
             this.yellowStarPictureBox2.Size = new System.Drawing.Size(87, 93);
             this.yellowStarPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -244,7 +244,7 @@
             // yellowStarPictureBox3
             // 
             this.yellowStarPictureBox3.Image = global::UnipiGuide.Properties.Resources.yellow_small_40;
-            this.yellowStarPictureBox3.Location = new System.Drawing.Point(350, 249);
+            this.yellowStarPictureBox3.Location = new System.Drawing.Point(350, 150);
             this.yellowStarPictureBox3.Name = "yellowStarPictureBox3";
             this.yellowStarPictureBox3.Size = new System.Drawing.Size(87, 93);
             this.yellowStarPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -255,7 +255,7 @@
             // yellowStarPictureBox4
             // 
             this.yellowStarPictureBox4.Image = global::UnipiGuide.Properties.Resources.yellow_small_40;
-            this.yellowStarPictureBox4.Location = new System.Drawing.Point(443, 249);
+            this.yellowStarPictureBox4.Location = new System.Drawing.Point(443, 150);
             this.yellowStarPictureBox4.Name = "yellowStarPictureBox4";
             this.yellowStarPictureBox4.Size = new System.Drawing.Size(87, 93);
             this.yellowStarPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -266,7 +266,7 @@
             // yellowStarPictureBox5
             // 
             this.yellowStarPictureBox5.Image = global::UnipiGuide.Properties.Resources.yellow_small_40;
-            this.yellowStarPictureBox5.Location = new System.Drawing.Point(536, 249);
+            this.yellowStarPictureBox5.Location = new System.Drawing.Point(536, 150);
             this.yellowStarPictureBox5.Name = "yellowStarPictureBox5";
             this.yellowStarPictureBox5.Size = new System.Drawing.Size(87, 93);
             this.yellowStarPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -319,15 +319,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1563, 756);
-            this.Controls.Add(this.yellowStarPictureBox5);
-            this.Controls.Add(this.yellowStarPictureBox4);
-            this.Controls.Add(this.yellowStarPictureBox3);
             this.Controls.Add(this.whiteStarPictureBox5);
             this.Controls.Add(this.whiteStarPictureBox4);
             this.Controls.Add(this.whiteStarPictureBox3);
-            this.Controls.Add(this.yellowStarPictureBox2);
             this.Controls.Add(this.whiteStarPictureBox2);
-            this.Controls.Add(this.yellowStarPictureBox);
             this.Controls.Add(this.whiteStarPictureBox);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.reviewsDataGridView);
@@ -336,6 +331,11 @@
             this.Controls.Add(this.CommentLabel);
             this.Controls.Add(this.StarsLabel);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.yellowStarPictureBox5);
+            this.Controls.Add(this.yellowStarPictureBox4);
+            this.Controls.Add(this.yellowStarPictureBox3);
+            this.Controls.Add(this.yellowStarPictureBox2);
+            this.Controls.Add(this.yellowStarPictureBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

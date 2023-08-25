@@ -53,6 +53,10 @@ namespace UnipiGuide
             foreach(PictureBox pictureBox in this.whiteStars){
                 pictureBox.Click += new System.EventHandler(this.OnStarClick);
             }
+            foreach (PictureBox pictureBox in this.yellowStars)
+            {
+                pictureBox.Click += new System.EventHandler(this.OnStarClick);
+            }
         }
 
         private void HideIcons(ArrayList sourceArrayList, String tagStart, String tagEnd)
@@ -80,7 +84,34 @@ namespace UnipiGuide
 
             }
         }
-        
+
+        private void ShowIcons(ArrayList sourceArrayList, int firstIndex, int lastIndex) { 
+
+            foreach(PictureBox pictureBox in sourceArrayList) {
+                int index = sourceArrayList.IndexOf(pictureBox)+1;
+                if (index <= lastIndex && index>=firstIndex)
+                {
+                    pictureBox.Show();
+                }                
+            }
+
+        }
+
+        private void HideIcons(ArrayList sourceArrayList, int firstIndex, int lastIndex)
+        {
+
+            foreach (PictureBox pictureBox in sourceArrayList)
+            {
+                int index = sourceArrayList.IndexOf(pictureBox) + 1;
+                if (index <= lastIndex && index>=firstIndex)
+                {
+                    pictureBox.Hide();
+                }                
+            }
+
+        }
+
+
 
         private bool FirstIsSmaller(String tag1, String tag2)
         {
@@ -95,12 +126,62 @@ namespace UnipiGuide
 
         private void OnStarClick(object sender, EventArgs e)
         {
-            foreach(PictureBox pictureBox in this.whiteStars)
+            //foreach(PictureBox pictureBox in this.whiteStars)
+            //{
+            //    if (pictureBox.Equals(sender))
+            //    {
+            //        String selectedTag = pictureBox.Tag.ToString();
+            //        //check if tag contains white or yellow
+            //        //
+            //        Debug.WriteLine(selectedTag);
+            //        return;
+            //    }
+            //}
+
+            PictureBox pictureBox = sender as PictureBox;
+            String tag = pictureBox.Tag.ToString();
+            int num = Int32.Parse(tag[tag.Length - 1].ToString());
+
+            //if (tag.Contains("white"))
+            //{
+            //    HideIcons(this.whiteStars, "white1", "white"+num.ToString());
+
+            //    string yellowTagStart = "yellow1";
+            //    string yellowTagEnd = tag;                
+            //    ShowIcons(this.yellowStars, yellowTagStart, yellowTagEnd);
+            //    if (num != 5)
+            //    {
+            //        num++;
+            //    }
+            //    yellowTagStart = "yellow" + num.ToString();
+            //    yellowTagEnd = "yellow5";
+            //    HideIcons(this.yellowStars, yellowTagStart, yellowTagEnd);
+            //}
+            //if (tag.Contains("yellow"))
+            //{
+            //    string yellowTagStart = "yellow5";
+            //    if (num != 5)
+            //    {
+            //        yellowTagStart = "yellow" + (num+1).ToString();
+            //    }
+            //    string yellowTagEnd = "yellow5";
+            //    HideIcons(this.yellowStars, yellowTagStart, yellowTagEnd);
+            //    string whiteTagStart = "white"+(num+1).ToString();
+            //    string whiteTagEnd = "white5";
+            //    ShowIcons(this.whiteStars, whiteTagStart, whiteTagEnd);
+            //}
+            if (tag.Contains("white"))
             {
-                if (pictureBox.Equals(sender))
-                {
-                    Debug.WriteLine(pictureBox.Tag);
-                }
+                //show yellow from 1 to selected integer
+                ShowIcons(this.yellowStars, 1, num);
+                HideIcons(this.whiteStars, 1, num);
+                HideIcons(this.yellowStars, num+1, this.yellowStars.Count);                                                                              
+            }
+            if (tag.Contains("yellow"))
+            {
+                
+                ShowIcons(this.whiteStars, num+1, this.whiteStars.Count);
+                HideIcons(this.yellowStars, num+1, this.yellowStars.Count);
             }
         }
 
