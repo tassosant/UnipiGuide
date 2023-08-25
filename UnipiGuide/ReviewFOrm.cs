@@ -18,7 +18,7 @@ namespace UnipiGuide
     public partial class ReviewForm : Form
     {
         MockDB db; //will change in future, pass by reference instead of instantiation in this class's constructor
-
+        int rating;
         ArrayList whiteStars;
         ArrayList yellowStars;
         public ReviewForm()
@@ -141,7 +141,7 @@ namespace UnipiGuide
             PictureBox pictureBox = sender as PictureBox;
             String tag = pictureBox.Tag.ToString();
             int num = Int32.Parse(tag[tag.Length - 1].ToString());
-
+            this.rating = num;
             //if (tag.Contains("white"))
             //{
             //    HideIcons(this.whiteStars, "white1", "white"+num.ToString());
@@ -193,7 +193,7 @@ namespace UnipiGuide
         private void SubmitReviewButton_Click(object sender, EventArgs e)
         {
             Review review = new Review();
-            review.Stars = 4; //count the clicked icon
+            review.Stars = this.rating; //count the clicked icon
             review.ReviewId = MockDB.Reviews.Count + 1;
             review.Comment = this.commentRichTextBox.Text;
 
@@ -202,12 +202,13 @@ namespace UnipiGuide
             
             MockDB.Reviews.Add(review);
             MockDB.SelectedUser.Review = review;
-            
+            DisplayRows();
 
         }
 
         private void DisplayRows()
         {
+            this.reviewsDataGridView.Rows.Clear();
             foreach(User user in MockDB.Users)
             {
                 CreateRow(user);
@@ -220,7 +221,7 @@ namespace UnipiGuide
                 new object[]
                     {
                         user.UserName,
-                        user.Review.Stars,
+                        user.Review.Stars + "/5",
                         user.Review.Comment,
                     }
                 );
