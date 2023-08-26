@@ -67,10 +67,11 @@
             // StarsLabel
             // 
             this.StarsLabel.AutoSize = true;
+            this.StarsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StarsLabel.ForeColor = System.Drawing.Color.Snow;
-            this.StarsLabel.Location = new System.Drawing.Point(55, 179);
+            this.StarsLabel.Location = new System.Drawing.Point(55, 184);
             this.StarsLabel.Name = "StarsLabel";
-            this.StarsLabel.Size = new System.Drawing.Size(62, 25);
+            this.StarsLabel.Size = new System.Drawing.Size(92, 37);
             this.StarsLabel.TabIndex = 7;
             this.StarsLabel.Text = "Stars";
             this.StarsLabel.Click += new System.EventHandler(this.label1_Click);
@@ -78,10 +79,11 @@
             // CommentLabel
             // 
             this.CommentLabel.AutoSize = true;
+            this.CommentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.CommentLabel.Location = new System.Drawing.Point(55, 246);
+            this.CommentLabel.Location = new System.Drawing.Point(55, 276);
             this.CommentLabel.Name = "CommentLabel";
-            this.CommentLabel.Size = new System.Drawing.Size(103, 25);
+            this.CommentLabel.Size = new System.Drawing.Size(156, 37);
             this.CommentLabel.TabIndex = 8;
             this.CommentLabel.Text = "Comment";
             // 
@@ -340,6 +342,7 @@
             this.Name = "ReviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reviews";
+            this.Load += new System.EventHandler(this.ReviewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.reviewsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yellowStarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.whiteStarPictureBox)).EndInit();

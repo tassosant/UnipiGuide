@@ -28,22 +28,33 @@ namespace UnipiGuide
         // schools button
         private void button_WOC2_Click(object sender, EventArgs e)
         {
-            Schools h = new Schools();
-            h.ShowDialog();
+            NavigateToForm(new Schools());
+            //Schools h = new Schools();
+            //h.ShowDialog();
         }
 
         // review button
         private void button_WOC3_Click(object sender, EventArgs e)
         {
-            ReviewForm h = new ReviewForm();
-            h.ShowDialog();
+            NavigateToForm(new ReviewForm());
+            //ReviewForm h = new ReviewForm();
+            //h.ShowDialog();
         }
 
         // eclass button
         private void button_WOC2_Click_1(object sender, EventArgs e)
         {
-            EClass h = new EClass();
-            h.ShowDialog();
+            NavigateToForm(new EClass());
+            //EClass h = new EClass();
+            //h.ShowDialog();
+        }
+
+        private void NavigateToForm(Form form)
+        {
+
+            form.Tag = this;
+            form.Show(this);
+            Hide();
         }
     }
 }

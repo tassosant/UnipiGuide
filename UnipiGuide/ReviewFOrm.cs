@@ -244,5 +244,10 @@ namespace UnipiGuide
         {
             e.Graphics.DrawString(this.reviewsDataGridView.ToString(), this.reviewsDataGridView.Font, Brushes.Black, 10, 25);
         }
+
+        private void ReviewForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

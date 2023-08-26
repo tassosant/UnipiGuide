@@ -59,8 +59,9 @@ namespace UnipiGuide
                 MockDB.SelectedUser = user;
                 this.ErrorLoginMessageLabel.Text = string.Empty;
                 //Home h = new Home(isUser, this.db.SelectedUser);
-                Home h = new Home(isUser, MockDB.SelectedUser);
-                h.ShowDialog();
+                NavigateToForm(isUser, MockDB.SelectedUser);
+                //Home h = new Home(isUser, MockDB.SelectedUser);
+                //h.ShowDialog();
             }
         }
 
@@ -87,10 +88,22 @@ namespace UnipiGuide
         private void guest_button_WOC2_Click(object sender, EventArgs e)
         {
             bool isUser = false;
-            Home h = new Home(isUser, null); 
-            h.ShowDialog();
+            NavigateToForm(isUser, null);
+            //Home h = new Home(isUser, null); 
+            //h.ShowDialog();
             
              
+        }
+
+        private void NavigateToForm(bool isUser, User user)
+        {
+            
+                //Home h = new Home(isUser, user);
+                //h.ShowDialog();
+                Home h = new Home(isUser, user);
+                h.Tag = this;
+                h.Show(this);
+                Hide();
         }
     }
 }
