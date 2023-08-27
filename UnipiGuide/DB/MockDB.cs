@@ -56,6 +56,15 @@ namespace UnipiGuide.Controllers
             
         }
 
+        public static void CreateGuest(User guest)
+        {
+            int id = users.Count;
+            guest.Id = id;
+            guest.UserName = "anonymous";
+            guest.Review = guest.Review;
+            users.Add(guest);
+        }
+
         public void CreateUser(string username)
         {
             int id = users.Count;

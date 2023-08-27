@@ -22,7 +22,7 @@ namespace UnipiGuide
         public Welcome()
         {
             InitializeComponent();
-            
+            InitWelcomeFormsModels();
         }
 
         private void InitWelcomeFormsModels()
@@ -43,7 +43,7 @@ namespace UnipiGuide
         // continue as user button
         private void login_button_WOC1_Click(object sender, EventArgs e)
         {
-            InitWelcomeFormsModels();
+            
             
             bool isUser = true;
             User user = null;

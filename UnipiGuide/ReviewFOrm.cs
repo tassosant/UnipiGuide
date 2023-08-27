@@ -193,19 +193,24 @@ namespace UnipiGuide
         private void SubmitReviewButton_Click(object sender, EventArgs e)
         {
             Review review = new Review();
-            review.Stars = this.rating; //count the clicked icon
+            review.Stars = this.rating; //count the clicked icons
             review.ReviewId = MockDB.Reviews.Count + 1;
             review.Comment = this.commentRichTextBox.Text;
-
+            if (MockDB.SelectedUser == null)
+            {
+               User guest = new User();
+               MockDB.CreateGuest(guest);
+               MockDB.SelectedUser = guest;
+            }
             Review previousReview = MockDB.SelectedUser.Review;
             MockDB.Reviews.Remove(previousReview);
-            
-            MockDB.Reviews.Add(review);
             MockDB.SelectedUser.Review = review;
+            MockDB.Reviews.Add(review);
+            
             DisplayRows();
 
         }
-
+        
         private void DisplayRows()
         {
             this.reviewsDataGridView.Rows.Clear();
