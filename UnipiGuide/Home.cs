@@ -7,15 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 using UnipiGuide.Models;
 
 namespace UnipiGuide
 {
+    
     public partial class Home : Form
     {
+        private System.Windows.Forms.MenuStrip menuStrip;
+        FormForNavBar formForNavBar;
         public Home(bool isUser, User user)
         {
             InitializeComponent();
+            InitializeCustomMenuStrip();
+
+
+            this.formForNavBar = new FormForNavBar();
+            this.menuStrip = this.formForNavBar.GetMenuStrip();
+            this.MainMenuStrip = this.menuStrip;
+            this.formForNavBar.LayoutsAndControlsHandler(this.menuStrip, this);
             if (!isUser)
             {
                 // this is the eclass button, accessible only for registered users
@@ -55,6 +66,18 @@ namespace UnipiGuide
             form.Tag = this;
             form.Show(this);
             Hide();
+        }
+        
+            
+        private void InitializeCustomMenuStrip()
+        {
+            //this.menuStrip.SuspendLayout();
+            //this.SuspendLayout();
+            //this.MainMenuStrip = this.menuStrip;
+            //this.Controls.Add(this.menuStrip);
+            //this.ResumeLayout(false);
+            //this.PerformLayout();
+
         }
     }
 }

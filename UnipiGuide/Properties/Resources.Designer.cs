@@ -73,6 +73,16 @@ namespace UnipiGuide.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap papei1 {
+            get {
+                object obj = ResourceManager.GetObject("papei1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap white_star {
             get {
                 object obj = ResourceManager.GetObject("white star", resourceCulture);

@@ -43,7 +43,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(75, 179);
+            this.richTextBox1.Location = new System.Drawing.Point(81, 231);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(640, 367);
@@ -57,7 +57,7 @@
             this.button_WOC1.FlatAppearance.BorderSize = 0;
             this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.Location = new System.Drawing.Point(779, 179);
+            this.button_WOC1.Location = new System.Drawing.Point(785, 231);
             this.button_WOC1.Name = "button_WOC1";
             this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.LightGreen;
             this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
@@ -76,7 +76,7 @@
             this.button_WOC2.FlatAppearance.BorderSize = 0;
             this.button_WOC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC2.Location = new System.Drawing.Point(779, 468);
+            this.button_WOC2.Location = new System.Drawing.Point(785, 520);
             this.button_WOC2.Name = "button_WOC2";
             this.button_WOC2.OnHoverBorderColor = System.Drawing.Color.LightGreen;
             this.button_WOC2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
@@ -95,7 +95,7 @@
             this.button_WOC3.FlatAppearance.BorderSize = 0;
             this.button_WOC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_WOC3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC3.Location = new System.Drawing.Point(779, 322);
+            this.button_WOC3.Location = new System.Drawing.Point(785, 374);
             this.button_WOC3.Name = "button_WOC3";
             this.button_WOC3.OnHoverBorderColor = System.Drawing.Color.LightGreen;
             this.button_WOC3.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
@@ -110,7 +110,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UnipiGuide.Properties.Resources.logopapei3;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(470, 137);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

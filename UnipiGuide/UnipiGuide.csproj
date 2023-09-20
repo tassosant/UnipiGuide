@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseForm.Designer.cs">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -65,6 +60,13 @@
     <Compile Include="EClass.Designer.cs">
       <DependentUpon>EClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormForNavBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormForNavBar.Designer.cs">
+      <DependentUpon>FormForNavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsController.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +102,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EClass.resx">
       <DependentUpon>EClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormForNavBar.resx">
+      <DependentUpon>FormForNavBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -160,6 +162,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\yellow small_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\papei1.png" />
+    <Content Include="Resources\papei2.jpg" />
+    <Content Include="Resources\papei3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -100,9 +100,12 @@ namespace UnipiGuide
             
                 //Home h = new Home(isUser, user);
                 //h.ShowDialog();
+                MockDB.isUser = isUser;
+                
                 Home h = new Home(isUser, user);
-                h.Tag = this;
-                h.Show(this);
+                h.BringToFront();
+                //h.Tag = this;
+                h.Show();
                 Hide();
         }
     }

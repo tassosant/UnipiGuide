@@ -13,8 +13,8 @@ namespace UnipiGuide.Controllers
     {
         static ArrayList users;
         static ArrayList reviews;
-        static User selectedUser;
-
+        static User selectedUser = null;
+        public static bool isUser = false;
         public static ArrayList Users { get { return users; } }
         public static ArrayList Reviews { get { return reviews; } }
 

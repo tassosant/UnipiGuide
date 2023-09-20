@@ -1,6 +1,6 @@
 ﻿namespace UnipiGuide
 {
-    partial class BaseForm
+    partial class FormForNavBar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,45 +29,55 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schoolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eclassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.somethingElseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.reviewToolStripMenuItem,
-            this.schoolsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 42);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.schoolsToolStripMenuItem,
+            this.eclassToolStripMenuItem,
+            this.somethingElseToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(800, 42);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(99, 38);
             this.homeToolStripMenuItem.Text = "Home";
-            // 
-            // reviewToolStripMenuItem
-            // 
-            this.reviewToolStripMenuItem.Name = "reviewToolStripMenuItem";
-            this.reviewToolStripMenuItem.Size = new System.Drawing.Size(108, 38);
-            this.reviewToolStripMenuItem.Text = "Review";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.HomeToolStripMenuItem_Click);
             // 
             // schoolsToolStripMenuItem
             // 
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
             this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(116, 38);
             this.schoolsToolStripMenuItem.Text = "Schools";
+            this.schoolsToolStripMenuItem.Click += new System.EventHandler(this.SchoolsToolStripMenuItem_Click);
+            // 
+            // eclassToolStripMenuItem
+            // 
+            this.eclassToolStripMenuItem.Name = "eclassToolStripMenuItem";
+            this.eclassToolStripMenuItem.Size = new System.Drawing.Size(95, 38);
+            this.eclassToolStripMenuItem.Text = "Eclass";
+            // 
+            // somethingElseToolStripMenuItem
+            // 
+            this.somethingElseToolStripMenuItem.Name = "somethingElseToolStripMenuItem";
+            this.somethingElseToolStripMenuItem.Size = new System.Drawing.Size(118, 38);
+            this.somethingElseToolStripMenuItem.Text = "Reviews";
             // 
             // contextMenuStrip1
             // 
@@ -75,17 +85,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // BaseForm
+            // FormForNavBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "BaseForm";
-            this.Text = "BaseForm";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
+            this.Name = "FormForNavBar";
+            this.Text = "FormForNavBar";
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,10 +103,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schoolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eclassToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem somethingElseToolStripMenuItem;
     }
 }
