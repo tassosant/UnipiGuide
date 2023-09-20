@@ -18,6 +18,7 @@ namespace UnipiGuide
         public Home(bool isUser, User user)
         {
             InitializeComponent();
+            
             if (!isUser)
             {
                 // this is the eclass button, accessible only for registered users
