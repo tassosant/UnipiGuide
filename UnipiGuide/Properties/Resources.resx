@@ -134,6 +134,10 @@
     <value>..\Resources\white star smaller (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="papei1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+<<<<<<< HEAD
     <value>..\Resources\papei1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+=======
+    <value>..\Resources\papei1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+>>>>>>> c7f565983a579ad776dd9d07b4ce3adca04c612b
   </data>
 </root>
