@@ -121,16 +121,19 @@
   <data name="logopapei3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logopapei3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="white star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\white star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white star smaller" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\white star smaller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow small_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow small_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white star smaller (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\white star smaller (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\white star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yellow small_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yellow small_40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="papei1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\papei1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

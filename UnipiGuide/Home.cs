@@ -13,6 +13,8 @@ namespace UnipiGuide
 {
     public partial class Home : Form
     {
+        int imgNum = 1;
+        FolderBrowserDialog fbd;
         public Home(bool isUser, User user)
         {
             InitializeComponent();
@@ -55,6 +57,29 @@ namespace UnipiGuide
             form.Tag = this;
             form.Show(this);
             Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void LoadNextImage() {
+            if (imgNum == 4)
+            {
+                imgNum = 1;
+            }
+            pictureBox2.ImageLocation = string.Format(@"Slide\papei{0}.jpg", imgNum);
+            imgNum++;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LoadNextImage();
+
+
         }
     }
 }
