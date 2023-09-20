@@ -15,13 +15,8 @@ namespace UnipiGuide
     
     public partial class Home : Form
     {
-<<<<<<< HEAD
-        private System.Windows.Forms.MenuStrip menuStrip;
-        FormForNavBar formForNavBar;
-=======
         int imgNum = 1;
         FolderBrowserDialog fbd;
->>>>>>> c7f565983a579ad776dd9d07b4ce3adca04c612b
         public Home(bool isUser, User user)
         {
             InitializeComponent();
@@ -71,42 +66,6 @@ namespace UnipiGuide
             form.Tag = this;
             form.Show(this);
             Hide();
-        }
-<<<<<<< HEAD
-        
-            
-        private void InitializeCustomMenuStrip()
-        {
-            //this.menuStrip.SuspendLayout();
-            //this.SuspendLayout();
-            //this.MainMenuStrip = this.menuStrip;
-            //this.Controls.Add(this.menuStrip);
-            //this.ResumeLayout(false);
-            //this.PerformLayout();
-=======
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void LoadNextImage() {
-            if (imgNum == 4)
-            {
-                imgNum = 1;
-            }
-            pictureBox2.ImageLocation = string.Format(@"Slide\papei{0}.jpg", imgNum);
-            imgNum++;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            LoadNextImage();
-
->>>>>>> c7f565983a579ad776dd9d07b4ce3adca04c612b
-
         }
     }
 }
