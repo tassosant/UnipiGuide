@@ -29,43 +29,59 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reviewsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schoolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.homeMenuItem,
+            this.reviewsMenuItem,
+            this.schoolsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(200, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripMenuItem1
+            // homeMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(248, 20);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.homeMenuItem.Name = "homeMenuItem";
+            this.homeMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.homeMenuItem.Text = "Home";
             // 
-            // toolStripMenuItem2
+            // reviewsMenuItem
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(32, 19);
-            this.toolStripMenuItem2.Text = "toolStripMenuItem2";
+            this.reviewsMenuItem.Name = "reviewsMenuItem";
+            this.reviewsMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.reviewsMenuItem.Text = "Reviews";
+            // 
+            // schoolsMenuItem
+            // 
+            this.schoolsMenuItem.Name = "schoolsMenuItem";
+            this.schoolsMenuItem.Size = new System.Drawing.Size(116, 20);
+            this.schoolsMenuItem.Text = "Schools";
+            // 
+            // Navbar
+            // 
+            this.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.Size = new System.Drawing.Size(200, 24);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
 
         }
 
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem homeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reviewsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schoolsMenuItem;
     }
 }
