@@ -53,7 +53,7 @@ namespace UnipiGuide
                 Debug.WriteLine(item.ToString());
                 item.Visible = true;
                 item.ImageIndex = imageIndex;                
-                this.Items.Add(item);                
+                //this.Items.Add(item);                
                 imageIndex++;
 
             }

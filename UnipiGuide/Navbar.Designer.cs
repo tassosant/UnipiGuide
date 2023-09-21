@@ -39,10 +39,10 @@
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            //this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.homeMenuItem,
-            //this.reviewsMenuItem,
-            //this.schoolsMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeMenuItem,
+            this.reviewsMenuItem,
+            this.schoolsMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(200, 24);
@@ -71,6 +71,10 @@
             // 
             this.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.Size = new System.Drawing.Size(200, 24);
+            this.Items.Add(this.homeMenuItem);
+            this.Items.Add(this.reviewsMenuItem);
+            this.Items.Add(this.schoolsMenuItem);
+            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
