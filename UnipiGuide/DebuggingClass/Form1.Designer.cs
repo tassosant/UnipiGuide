@@ -1,13 +1,13 @@
-﻿namespace UnipiGuide
+﻿namespace UnipiGuide.DebuggingClass
 {
-    partial class Navbar
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reviewsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schoolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.test1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.test2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,49 +38,47 @@
             // 
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            //this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.homeMenuItem,
-            //this.reviewsMenuItem,
-            //this.schoolsMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.test1ToolStripMenuItem,
+            this.test2ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(200, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // homeMenuItem
+            // test1ToolStripMenuItem
             // 
-            this.homeMenuItem.Name = "homeMenuItem";
-            this.homeMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.homeMenuItem.Text = "Home";
+            this.test1ToolStripMenuItem.Name = "test1ToolStripMenuItem";
+            this.test1ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
+            this.test1ToolStripMenuItem.Text = "test1";
             // 
-            // reviewsMenuItem
+            // test2ToolStripMenuItem
             // 
-            this.reviewsMenuItem.Name = "reviewsMenuItem";
-            this.reviewsMenuItem.Size = new System.Drawing.Size(118, 20);
-            this.reviewsMenuItem.Text = "Reviews";
+            this.test2ToolStripMenuItem.Name = "test2ToolStripMenuItem";
+            this.test2ToolStripMenuItem.Size = new System.Drawing.Size(86, 36);
+            this.test2ToolStripMenuItem.Text = "test2";
             // 
-            // schoolsMenuItem
+            // Form1
             // 
-            this.schoolsMenuItem.Name = "schoolsMenuItem";
-            this.schoolsMenuItem.Size = new System.Drawing.Size(116, 20);
-            this.schoolsMenuItem.Text = "Schools";
-            // 
-            // Navbar
-            // 
-            this.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.Size = new System.Drawing.Size(200, 24);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reviewsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schoolsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem test1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem test2ToolStripMenuItem;
     }
 }

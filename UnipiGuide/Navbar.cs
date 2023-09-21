@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using UnipiGuide.Controllers;
 
 namespace UnipiGuide
 {
@@ -45,10 +46,16 @@ namespace UnipiGuide
 
         private void MakeMenuItemsVisible()
         {
+            
+            int imageIndex = 0;
             foreach(ToolStripMenuItem item in this.menuItems.Keys)
             {
+                Debug.WriteLine(item.ToString());
                 item.Visible = true;
-                this.Items.Add(item);
+                item.ImageIndex = imageIndex;                
+                this.Items.Add(item);                
+                imageIndex++;
+
             }
         }
 
@@ -85,11 +92,17 @@ namespace UnipiGuide
             Type currentFormType = this.Parent.GetType();
             Type formTypeToNavigate = formType;
 
-            if(formTypeToNavigate!= currentFormType) {             
-                Form form = (Form)Activator.CreateInstance(formType);
-                form.Show();
+            if(formTypeToNavigate!= currentFormType) {
+                //Form form = (Form)Activator.CreateInstance(formType);
+                //form.Show();
+                FormsController.ShowForm(formTypeToNavigate);
+                this.Parent.Dispose();
             }
+        }
 
+        private void ReOrderItems()
+        {
+            bool isOrdered = true;
         }
     }
 }

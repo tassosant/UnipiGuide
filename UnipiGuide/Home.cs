@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnipiGuide.Controllers;
+using UnipiGuide.DebuggingClass;
 using UnipiGuide.Models;
 
 namespace UnipiGuide
@@ -19,6 +21,8 @@ namespace UnipiGuide
         {
             InitializeComponent();
             
+            NavbarItems.PrintOrder(this);
+            
             if (!isUser)
             {
                 // this is the eclass button, accessible only for registered users
@@ -27,11 +31,23 @@ namespace UnipiGuide
 
         }
 
+        public Home()
+        {
+            InitializeComponent();
+            
+            if (MockDB.SelectedUser == null)
+            {
+                button_WOC2.Hide();
+            }
+        }
+
 
         // schools button
         private void button_WOC2_Click(object sender, EventArgs e)
         {
-            NavigateToForm(new Schools());
+            //NavigateToForm(new Schools());
+            Controllers.FormsController.ShowForm(typeof(Schools));
+            this.Dispose(true);
             //Schools h = new Schools();
             //h.ShowDialog();
         }
@@ -39,7 +55,9 @@ namespace UnipiGuide
         // review button
         private void button_WOC3_Click(object sender, EventArgs e)
         {
-            NavigateToForm(new ReviewForm());
+            Controllers.FormsController.ShowForm(typeof(ReviewForm));
+            this.Dispose(true);
+            //NavigateToForm(new ReviewForm());
             //ReviewForm h = new ReviewForm();
             //h.ShowDialog();
         }
@@ -47,7 +65,9 @@ namespace UnipiGuide
         // eclass button
         private void button_WOC2_Click_1(object sender, EventArgs e)
         {
-            NavigateToForm(new EClass());
+            Controllers.FormsController.ShowForm(typeof(EClass));
+            this.Dispose(true);
+            //NavigateToForm(new EClass());
             //EClass h = new EClass();
             //h.ShowDialog();
         }

@@ -24,6 +24,7 @@ namespace UnipiGuide
         public ReviewForm()
         {
             InitializeComponent();
+            this.MainMenuStrip.AllowItemReorder = false;
             //pass by reference thd db
             DisplayRows();
             yellowStars = new ArrayList();
