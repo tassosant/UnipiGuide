@@ -16,6 +16,7 @@ namespace UnipiGuide
         public Schools()
         {
             InitializeComponent();
+            AddEvents();
         }
 
         private void Schools_Load(object sender, EventArgs e)
@@ -49,6 +50,27 @@ namespace UnipiGuide
             // sxoli pliroforikis
             Tmhma h = new Tmhma("informatics");
             h.ShowDialog();
+        }
+
+        private void AddEvents()
+        {
+            AddCloseEvent();
+        }
+
+        private void AddCloseEvent()
+        {
+            this.SuspendLayout();
+            this.FormClosing += Form_Closing;
+            this.ResumeLayout(false);
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+
+                Application.Exit();
+            }
         }
     }
 }

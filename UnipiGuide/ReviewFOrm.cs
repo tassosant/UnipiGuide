@@ -58,6 +58,15 @@ namespace UnipiGuide
             {
                 pictureBox.Click += new System.EventHandler(this.OnStarClick);
             }
+            this.SuspendLayout();
+            this.FormClosing += Form_Closing;
+            this.ResumeLayout(false);
+        }
+
+        private void ReviewForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+            throw new NotImplementedException();
         }
 
         private void HideIcons(ArrayList sourceArrayList, String tagStart, String tagEnd)
@@ -255,5 +264,14 @@ namespace UnipiGuide
         {
 
         }
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                
+                Application.Exit();
+            }
+        }
+
     }
 }

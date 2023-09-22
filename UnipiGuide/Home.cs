@@ -20,8 +20,8 @@ namespace UnipiGuide
         public Home(bool isUser, User user)
         {
             InitializeComponent();
+            AddEvents();
             
-            NavbarItems.PrintOrder(this);
             
             if (!isUser)
             {
@@ -34,7 +34,7 @@ namespace UnipiGuide
         public Home()
         {
             InitializeComponent();
-            
+            AddEvents();
             if (MockDB.SelectedUser == null)
             {
                 button_WOC2.Hide();
@@ -101,6 +101,27 @@ namespace UnipiGuide
             LoadNextImage();
 
 
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+
+                Application.Exit();
+            }
+        }
+
+        private void AddEvents()
+        {
+            AddCloseEvent();
+        }
+
+        private void AddCloseEvent()
+        {
+            this.SuspendLayout();
+            this.FormClosing += Form_Closing;
+            this.ResumeLayout(false);
         }
     }
 }

@@ -16,6 +16,7 @@ namespace UnipiGuide
         {
             InitializeComponent();
             this.monthCalendar1.BoldedDates = new System.DateTime[] { new System.DateTime(2023, 9, 18, 0, 0, 0, 0) };
+            AddEvents();
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -39,6 +40,28 @@ namespace UnipiGuide
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddEvents()
+        {
+            AddCloseEvent();
+        }
+
+        private void AddCloseEvent()
+        {
+            this.SuspendLayout();
+            this.FormClosing += EClass_FormClosing;
+            this.ResumeLayout(false);
+        }
+
+        private void EClass_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+
+                Application.Exit();
+            }
+            
         }
     }
 }

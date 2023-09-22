@@ -323,7 +323,7 @@
             this.navbar1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.navbar1.Location = new System.Drawing.Point(0, 0);
             this.navbar1.Name = "navbar1";
-            this.navbar1.Size = new System.Drawing.Size(1563, 40);
+            this.navbar1.Size = new System.Drawing.Size(1632, 40);
             this.navbar1.TabIndex = 28;
             this.navbar1.Text = "navbar1";
             // 
@@ -332,7 +332,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(29)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(1563, 756);
+            this.ClientSize = new System.Drawing.Size(1632, 843);
             this.Controls.Add(this.whiteStarPictureBox5);
             this.Controls.Add(this.whiteStarPictureBox4);
             this.Controls.Add(this.whiteStarPictureBox3);

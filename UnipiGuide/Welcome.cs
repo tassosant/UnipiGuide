@@ -23,6 +23,7 @@ namespace UnipiGuide
         {
             InitializeComponent();
             InitWelcomeFormsModels();
+            AddEvents();
         }
 
         private void InitWelcomeFormsModels()
@@ -104,6 +105,27 @@ namespace UnipiGuide
                 h.Tag = this;
                 h.Show(this);
                 Hide();
+        }
+
+        private void AddEvents()
+        {
+            AddCloseEvent();
+        }
+
+        private void AddCloseEvent()
+        {
+            this.SuspendLayout();
+            this.FormClosing += Form_Closing;
+            this.ResumeLayout(false);
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+
+                Application.Exit();
+            }
         }
     }
 }
