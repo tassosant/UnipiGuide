@@ -31,6 +31,8 @@ namespace UnipiGuide
             whiteStars = new ArrayList();
             CollectStarPictureBoxes();
             AddMouseClicks();
+            GuestHandler();
+
         }
 
         private void CollectStarPictureBoxes()
@@ -208,9 +210,9 @@ namespace UnipiGuide
             review.Comment = this.commentRichTextBox.Text;
             if (MockDB.SelectedUser == null)
             {
-               User guest = new User();
-               MockDB.CreateGuest(guest);
-               MockDB.SelectedUser = guest;
+               //User guest = new User();
+               //MockDB.CreateGuest(guest);
+               //MockDB.SelectedUser = guest;
             }
             Review previousReview = MockDB.SelectedUser.Review;
             MockDB.Reviews.Remove(previousReview);
@@ -273,5 +275,27 @@ namespace UnipiGuide
             }
         }
 
+
+        private void GuestHandler()
+        {
+            if(MockDB.SelectedUser == null) { 
+                this.SuspendLayout();
+                this.commentRichTextBox.Visible = false;
+                this.SubmitReviewButton.Visible = false;
+                this.CommentLabel.Visible = false;
+                this.StarsLabel.Visible = false;
+                foreach(PictureBox star in this.yellowStars)
+                {
+                    star.Visible = false;
+                }
+
+                foreach(PictureBox star in this.whiteStars)
+                {
+                    star.Visible=false;
+                }
+                this.ResumeLayout();
+            }
+
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,9 @@ namespace UnipiGuide.Controllers
         static ArrayList users;
         static ArrayList reviews;
         static User selectedUser;
-
+        static ArrayList comments;
+        private static int usersCount = 10;
+        private static Random random = new Random();
         public static ArrayList Users { get { return users; } }
         public static ArrayList Reviews { get { return reviews; } }
 
@@ -40,7 +43,7 @@ namespace UnipiGuide.Controllers
             int index;
             for(index = 0; index < usersLength; index++)
             {
-                CreateUser("someUsername");
+                CreateUser("user");
                 /*User user = new User();
                 user.Id = index;
                 user.UserName = "aUserName" + index.ToString();
@@ -65,13 +68,14 @@ namespace UnipiGuide.Controllers
             users.Add(guest);
         }
 
+
         public void CreateUser(string username)
         {
             int id = users.Count;
             User user = new User();
             user.UserName = username+id.ToString();
-            user.Password = "password"+id.ToString();            
-            user.Review = CreateReview("comment", id);                        
+            user.Password = "password"+id.ToString();           
+            user.Review = CreateReview((string)comments[id], id);                        
             selectedUser = user;
             users.Add(user);
         }
@@ -80,7 +84,8 @@ namespace UnipiGuide.Controllers
         {
             Review review= new Review();
             review.ReviewId = id;
-            review.Comment = comment + review.ReviewId.ToString();
+            review.Comment = comment;
+            review.Stars = random.Next(1,6);
             reviews.Add(review);
             return review;
         }
@@ -90,6 +95,26 @@ namespace UnipiGuide.Controllers
             
         }*/
 
+
+        private void CreateComments()
+        {
+            comments = new ArrayList();
+            int index = 1;
+            comments.Add("Very nice university");
+            index++;
+            comments.Add("Very nice teachers");
+            index++;
+            comments.Add("Bad infastructure");
+            index++;
+            comments.Add("Toilets stink");
+            index++;
+            for (int temp = index; temp <= usersCount; temp++)
+            {
+                comments.Add("comment"+temp);
+            }
+            
+
+        }
         
 
         public MockDB() {
@@ -98,7 +123,7 @@ namespace UnipiGuide.Controllers
             reviews = null;
             selectedUser = null; 
 
-
+            CreateComments();
             users = new ArrayList();
             reviews = new ArrayList();
             CreateMockUsers();
@@ -109,5 +134,7 @@ namespace UnipiGuide.Controllers
             //Array.Copy(CreateMockUsers(), 0, Users, 0, CreateMockUsers().Length);
             
         }
+
+
     }
 }

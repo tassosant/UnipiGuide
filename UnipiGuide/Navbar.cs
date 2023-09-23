@@ -41,38 +41,27 @@ namespace UnipiGuide
             this.menuItems.Add(this.homeMenuItem, typeof(Home));
             this.menuItems.Add(this.reviewsMenuItem, typeof(ReviewForm));
             this.menuItems.Add(this.schoolsMenuItem, typeof(Schools));
+            this.menuItems.Add(this.aboutMenuItem, typeof(MessageBox));
 
         }
 
         private void MakeMenuItemsVisible()
         {
-            
+            this.SuspendLayout();
             int imageIndex = 0;
             foreach(ToolStripMenuItem item in this.menuItems.Keys)
             {
-                Debug.WriteLine(item.ToString());
+                
                 item.Visible = true;
                 item.ImageIndex = imageIndex;                
                 //this.Items.Add(item);                
                 imageIndex++;
 
             }
+            this.ResumeLayout(false);
         }
 
-        private void GoToForm(Form form)
-        {
-
-            form.Tag = this;
-            form.Show(this);
-            Hide();
-        }
-
-        private void NavigateToForm(Form form)
-        {
-            form.Tag = this;
-            form.Show(this);
-
-        }
+        
 
         private void AddEventsInMenuItems()
         {
@@ -89,6 +78,12 @@ namespace UnipiGuide
 
         private void NavbarItemClicked(object sender, EventArgs e, Type formType)
         {
+            //if is about button
+            if(formType == typeof(MessageBox)) {
+                FillMessageBox();
+                return;
+            }
+
             Type currentFormType = this.Parent.GetType();
             Type formTypeToNavigate = formType;
 
@@ -100,9 +95,12 @@ namespace UnipiGuide
             }
         }
 
-        private void ReOrderItems()
+        private void FillMessageBox()
         {
-            bool isOrdered = true;
+
+            string msg = String.Format("Tasos Antoniou\nEuaggelia Thermou");
+            string title = "Creators";
+            MessageBox.Show(msg, title);
         }
     }
 }
