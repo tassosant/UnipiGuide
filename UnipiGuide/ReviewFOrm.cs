@@ -32,6 +32,8 @@ namespace UnipiGuide
             CollectStarPictureBoxes();
             AddMouseClicks();
             GuestHandler();
+            richTextBox1.Hide();
+            
 
         }
 
@@ -252,6 +254,7 @@ namespace UnipiGuide
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
+
             PrintDocument printDocument = new PrintDocument();
             printDocument.PrintPage += printDocument1_PrintPage;
             printDocument.Print();
@@ -259,7 +262,17 @@ namespace UnipiGuide
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(this.reviewsDataGridView.ToString(), this.reviewsDataGridView.Font, Brushes.Black, 10, 25);
+
+            StringBuilder sb = new StringBuilder("User name --- Stars --- Review\n");
+
+            foreach (User user in MockDB.Users)
+            {
+                sb.AppendFormat(user.UserName + " " +
+                        user.Review.Stars + "/5 " +
+                        user.Review.Comment + "\n");
+            }
+            richTextBox1.Text = sb.ToString();
+            e.Graphics.DrawString(this.richTextBox1.Text, this.richTextBox1.Font, Brushes.Black, 10, 25);
         }
 
         private void ReviewForm_Load(object sender, EventArgs e)
@@ -297,5 +310,12 @@ namespace UnipiGuide
             }
 
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+
     }
 }
