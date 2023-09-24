@@ -45,11 +45,12 @@
             this.menuStrip1.Size = new System.Drawing.Size(200, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeMenuItem,
             this.reviewsMenuItem,
             this.schoolsMenuItem,
             this.aboutMenuItem});
+            
             // 
             // homeMenuItem
             // 

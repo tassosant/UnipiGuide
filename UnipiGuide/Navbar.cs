@@ -37,11 +37,14 @@ namespace UnipiGuide
 
         private void CollectMenuItems()
         {
+            this.SuspendLayout();
             this.menuItems = new Hashtable();
             this.menuItems.Add(this.homeMenuItem, typeof(Home));
             this.menuItems.Add(this.reviewsMenuItem, typeof(ReviewForm));
             this.menuItems.Add(this.schoolsMenuItem, typeof(Schools));
             this.menuItems.Add(this.aboutMenuItem, typeof(MessageBox));
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -52,11 +55,24 @@ namespace UnipiGuide
             foreach(ToolStripMenuItem item in this.menuItems.Keys)
             {
                 
-                item.Visible = true;
+               
                 item.ImageIndex = imageIndex;                
                 //this.Items.Add(item);                
                 imageIndex++;
 
+            }
+            if(!DesignMode)
+            {
+                //List<ToolStripItem> toolStripItems =  this.menuStrip1.Items.Cast<List<ToolStripItem>>;
+                //foreach(ToolStripMenuItem item in this.menuItems.Keys)
+                //{
+                //    //this.Items.Add(item);
+                //}
+                this.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeMenuItem,
+            this.reviewsMenuItem,
+            this.schoolsMenuItem,
+            this.aboutMenuItem});
             }
             this.ResumeLayout(false);
         }
