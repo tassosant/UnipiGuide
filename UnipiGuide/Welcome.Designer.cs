@@ -46,7 +46,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(498, 227);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 44);
+            this.label1.Size = new System.Drawing.Size(148, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "UserName";
             // 
@@ -57,7 +57,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(498, 312);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 44);
+            this.label2.Size = new System.Drawing.Size(138, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -74,6 +74,7 @@
             // 
             // UsernameTextBox
             // 
+            this.UsernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.Location = new System.Drawing.Point(669, 213);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(305, 46);
@@ -82,6 +83,7 @@
             // 
             // PasswordTextBox
             // 
+            this.PasswordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.Location = new System.Drawing.Point(669, 298);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(305, 46);
@@ -132,7 +134,7 @@
             this.ErrorLoginMessageLabel.ForeColor = System.Drawing.Color.Red;
             this.ErrorLoginMessageLabel.Location = new System.Drawing.Point(669, 360);
             this.ErrorLoginMessageLabel.Name = "ErrorLoginMessageLabel";
-            this.ErrorLoginMessageLabel.Size = new System.Drawing.Size(0, 25);
+            this.ErrorLoginMessageLabel.Size = new System.Drawing.Size(0, 20);
             this.ErrorLoginMessageLabel.TabIndex = 7;
             // 
             // Welcome

@@ -145,7 +145,7 @@
             this.navbar1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.navbar1.Location = new System.Drawing.Point(0, 0);
             this.navbar1.Name = "navbar1";
-            this.navbar1.Size = new System.Drawing.Size(1185, 42);
+            this.navbar1.Size = new System.Drawing.Size(1185, 33);
             this.navbar1.TabIndex = 6;
             this.navbar1.Text = "navbar1";
             // 
